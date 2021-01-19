@@ -18,11 +18,45 @@ class MyHomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("MY Daily Cost"),
+        leading: Builder(
+          builder: (BuildContext context) {
+            return IconButton(
+              icon: const Icon(Icons.menu),
+              onPressed: () { Scaffold.of(context).openDrawer(); },
+              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+            );
+          },
+        ),
+        title: Text("M_COST"),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.add_alert),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.more_vert),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+            },
+          ),
+        ],
+
       ),
       body: Center(
-        child: Text("Lest's Start"),
-      ),
+        child:Container(
+          child: Column(
+            children: [
+              Card(),
+              Container(),
+              Container(),//ap
+              Container(),
+              Container()
+            ],
+          ),
+        )
+      )
     );
   }
 }
