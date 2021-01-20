@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 void main() {
   runApp(MyCost());
@@ -48,10 +50,154 @@ class MyHomePage extends StatelessWidget{
         child:Container(
           child: Column(
             children: [
-              Card(),
-              Container(),
-              Container(),//ap
-              Container(),
+              Card(
+                child: Container(
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        iconSize: 50,
+                        icon: const Icon(Icons.add),
+                      ),
+                      Container(
+                        child: Text("abc"),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.money),
+                        iconSize: 50,
+                        alignment: Alignment.topRight,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      iconSize: 50,
+                      icon: const Icon(Icons.add),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.money),
+                      iconSize: 50,
+                      alignment: Alignment.topRight,
+                    ),
+                    IconButton(
+                      iconSize: 50,
+                      icon: const Icon(Icons.add),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.money),
+                      iconSize: 50,
+                      alignment: Alignment.topRight,
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          iconSize: 50,
+                          icon: const Icon(Icons.add),
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.money),
+                          iconSize: 50,
+                          alignment: Alignment.topRight,
+                        ),
+                        IconButton(
+                          iconSize: 50,
+                          icon: const Icon(Icons.add),
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.money),
+                          iconSize: 50,
+                          alignment: Alignment.topRight,
+                        )
+                      ],
+                    ),
+                    Container(
+                      child: new CircularPercentIndicator(
+                        animation: true,
+                        backgroundColor: Colors.red,
+                        radius: 200.0,
+                        lineWidth: 20.0,
+                        percent: 0.7,
+                        center: new Text(
+                            "70%",
+                          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                        ),
+                        progressColor: Colors.green,
+                      ),
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          iconSize: 50,
+                          icon: const Icon(Icons.add),
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.money),
+                          iconSize: 50,
+                          alignment: Alignment.topRight,
+                        ),
+                        IconButton(
+                          iconSize: 50,
+                          icon: const Icon(Icons.add),
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.money),
+                          iconSize: 50,
+                          alignment: Alignment.topRight,
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),//ap
+              Container(
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      iconSize: 50,
+                      icon: const Icon(Icons.add),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.money),
+                      iconSize: 50,
+                      alignment: Alignment.topRight,
+                    ),
+                    IconButton(
+                      iconSize: 50,
+                      icon: const Icon(Icons.add),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.money),
+                      iconSize: 50,
+                      alignment: Alignment.topRight,
+                    )
+                  ],
+                ),
+              ),
               Container()
             ],
           ),
