@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import './amount_add.dart';
 
 void main() {
   runApp(MyCost());
@@ -16,6 +17,12 @@ class MyCost extends StatelessWidget{
   }
 }
 class MyHomePage extends StatelessWidget{
+
+  void _addCost(BuildContext ctx,String name){
+    Navigator.push(ctx, MaterialPageRoute(builder: (context) => AmountAdd(name)), );
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,9 +120,11 @@ class MyHomePage extends StatelessWidget{
                         IconButton(
                           iconSize: 50,
                           icon: const Icon(Icons.add),
+                          onPressed: ()=>_addCost(context,"add"),
                         ),
                         IconButton(
                           icon: const Icon(Icons.money),
+                          onPressed: ()=>_addCost(context,"money"),
                           iconSize: 50,
                           alignment: Alignment.topRight,
                         ),
