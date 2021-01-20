@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './TransactionList.dart';
 
 class AmountAdd extends StatefulWidget{
   final String mName;
@@ -13,6 +14,9 @@ class _AmountAddState extends State<AmountAdd>{
   final String mName;
 
   _AmountAddState(this.mName);
+  void _TransactionList(BuildContext ctx,String name){
+    Navigator.push(ctx, MaterialPageRoute(builder: (context) => TransactionList(mName)), );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,13 +30,12 @@ class _AmountAddState extends State<AmountAdd>{
             );
           },
         ),
-        title: Text("M_COST"),
+        title: Text(this.mName),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.add_alert),
-            tooltip: 'Show Snackbar',
-            onPressed: () {
-            },
+            icon: const Icon(Icons.format_list_numbered),
+            tooltip: "Show List of "+mName,
+            onPressed: ()=> _TransactionList(context, "List"),
           ),
           IconButton(
             icon: const Icon(Icons.more_vert),
