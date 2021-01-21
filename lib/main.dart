@@ -1,6 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mycost/TransactionList.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import './amount_add.dart';
 
@@ -12,7 +12,7 @@ class MyCost extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "My Cost",
+      title: "M_Cost",
       home: MyHomePage(),
     );
   }
@@ -70,7 +70,7 @@ class MyHomePage extends StatelessWidget{
                         icon: const Icon(Icons.add),
                       ),
                       Container(
-                        child: Text("abc"),
+                        child: Text("January,2021", style: TextStyle(fontSize: 30.0,),),
                       ),
                       IconButton(
                         icon: const Icon(Icons.money),
@@ -144,15 +144,15 @@ class MyHomePage extends StatelessWidget{
                     Container(
                       child: new CircularPercentIndicator(
                         animation: true,
-                        backgroundColor: Colors.red,
+                        backgroundColor: Colors.green,
                         radius: 200.0,
                         lineWidth: 20.0,
                         percent: 0.7,
-                        center: new Text(
-                            "70%",
+                        center: new Text("70%",
                           style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+
                         ),
-                        progressColor: Colors.green,
+                        progressColor: Colors.red,
                       ),
                     ),
                     Column(
