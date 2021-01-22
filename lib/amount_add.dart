@@ -46,14 +46,71 @@ class _AmountAddState extends State<AmountAdd>{
         ],
 
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Card(child: Text(this.mName),)
-          ],
-        ),
-      ),
+      body: Container(
+          color: Colors.red,
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  width: double.infinity,
+                  child: Center(
+                    child: Row(children: [
+                      Icon(Icons.calendar_today_outlined,
+                        size: 40,),
+                      Text("01/01/2020",
+                        style: TextStyle(fontSize: 20),)
+                    ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                  child: Card(
+                    elevation: 5000,
+                    color: Colors.greenAccent,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        child: Row(
+                          children: [
+                            Container(
+                              width: (MediaQuery.of(context).size.width-MediaQuery.of(context).padding.right-MediaQuery.of(context).padding.left)*0.2,
+                              child: Row(children: [
+                                  Icon(Icons.attach_money,
+                                    color: Colors.white,
+                                    size: 40,),
+                                  Container(height: 40,child: VerticalDivider(color: Colors.white,thickness: 1.5,)),
+                                ],),
+                            ),
+                            Container(
+                              width: (MediaQuery.of(context).size.width-MediaQuery.of(context).padding.right-MediaQuery.of(context).padding.left)*0.55,
+                              color: Colors.red,
+                              child: Text("0",
+                                style: TextStyle(fontSize: 40),
+                              )
+                            ),
+                            Container(
+                              width: (MediaQuery.of(context).size.width-MediaQuery.of(context).padding.right-MediaQuery.of(context).padding.left)*0.2,
+                              child: Row(children: [
+                                Container(height: 40,child: VerticalDivider(color: Colors.white,thickness: 1.5,)),
+                                IconButton(icon: const Icon(Icons.backspace),
+                                    iconSize: 20,
+                                    color: Colors.white,
+                                    onPressed:(){})
+                              ],),
+                            )
+
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        )
     );
   }
 
