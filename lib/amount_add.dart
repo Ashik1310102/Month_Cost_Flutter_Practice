@@ -47,7 +47,7 @@ class _AmountAddState extends State<AmountAdd>{
 
       ),
       body: Container(
-          color: Colors.red,
+          color: Colors.white60,
           child: Container(
             child: Column(
               children: <Widget>[
@@ -84,8 +84,8 @@ class _AmountAddState extends State<AmountAdd>{
                                 ],),
                             ),
                             Container(
-                              width: (MediaQuery.of(context).size.width-MediaQuery.of(context).padding.right-MediaQuery.of(context).padding.left)*0.55,
-                              color: Colors.red,
+                              width: (MediaQuery.of(context).size.width-MediaQuery.of(context).padding.right-MediaQuery.of(context).padding.left)*0.5,
+                              color: Colors.white,
                               child: Text("0",
                                 style: TextStyle(fontSize: 40),
                               )
